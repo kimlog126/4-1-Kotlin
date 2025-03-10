@@ -10,12 +10,12 @@ fun main(){
     println("1000 살 가격: \$${ticketPrice(1000)}")
 }
 
-fun ticketPrice(age:Int, isMonday: Boolean = false):Int {
-    return  when(age){
-        in 0..2 -> 15
-        in 3..60 -> if (!isMonday) 30 else 25
+fun ticketPrice(age: Int, isMonday: Boolean = false): Int {
+    return when (age) {
+        in 0..5 -> 15
+        in 5..60 -> if (isMonday) 25 else 30
         in 61..100 -> 20
         else -> -1
     }
-
 }
+
