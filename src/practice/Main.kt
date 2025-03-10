@@ -1,3 +1,5 @@
+package practice
+
 fun main(){
     val child =5
     val adult = 28
