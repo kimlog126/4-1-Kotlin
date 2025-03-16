@@ -11,7 +11,7 @@ class BidderList{
 
     fun getWinner(): Bidder? {
         return bidders
-            .filter { it.money != null && it.name != null }
+            .filter { it.name != null }
             .minByOrNull { it.money!! }
             ?.copy()
     }
@@ -22,7 +22,7 @@ fun main() {
     bidderList.add(Bidder(5000, "Jack"))
     bidderList.add(Bidder(4800, "Yop"))
     bidderList.add(null)
-    bidderList.add(Bidder(5200, null))
+    bidderList.add(Bidder(2200, null))
     println("Winner: ${bidderList.getWinner()}")
 }
 
